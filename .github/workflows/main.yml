@@ -1,0 +1,42 @@
+            - name: Port Sender
+  # You may pin to the exact commit or the version.
+  # uses: port-labs/port-sender@78659378121a6a6807dac9dfc3f56f186d064440
+  uses: port-labs/port-sender@v0.2.14
+  with:
+    # The Port Client ID to use to authenticate with the API
+    port_client_id: 
+    # The Port Client Secret to use to authenticate with the API
+    port_client_secret: 
+    # Port Region to use, if not provided will use the default region of the Port
+    port_region: # optional
+    # The URL of the Slack channel webhook to use to send messages. Required when using "target_kind" slack
+    slack_webhook_url: # optional
+    # The kind of operation to perform, either "scorecard_reminder", "scorecard_report" or "ticket_handler"
+    operation_kind: 
+    # The identifier of the blueprint in Port which you want to send reminders and reports about
+    blueprint: 
+    # The scorecard to use to send reminders and reports about
+    scorecard: 
+    # filter to use to filter the response, for example: {"property": "$team","operator": "containsAny","value": ["Backend"]}
+    filter_rule: # optional
+    # The target platform to integrate with. Can be either "slack" or "jira". Default is "slack
+    target_kind: # optional
+    # The URL of your Jira organization. Required when using "target_kind" jira
+    jira_api_endpoint: # optional
+    # The Jira email of the user account for using Jira REST API.  Required when using "target_kind" jira
+    jira_email: # optional
+    # The project id in Jira for tasks updating. Required when using "target_kind" jira
+    jira_project_id: # optional
+    # The Jira API token for using Jiras REST API. Required when using "target_kind" jira
+    jira_token: # optional
+    # The Jira transition ID used for resolving issues. If not inserted will use the default transition for the "Done" status.
+    jira_resolve_transition_id: # optional
+    # The Jira transition ID used for reopening issues. If not inserted will use the default transition for the "To Do" status.
+    jira_reopen_transition_id: # optional
+    # The Github API url. For example: https://api.github.com
+    github_api_url: # optional
+    # The Github Token
+    github_token: # optional
+    # The Github Repository. For example: octo-org/octo-repo
+    github_repository: # optional
+          
